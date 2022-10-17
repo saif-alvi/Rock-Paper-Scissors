@@ -18,7 +18,7 @@ let getComputerChoice = () => {let x =Math.random()
 
 let playRound = (playerSelection, computerSelection) => { 
 
-    let x =playerSelection.substr(0,1).toUpperCase() + playerSelection(1).toLowerCase();
+    let x =playerSelection.substr(0,1).toUpperCase() + playerSelection.substr(1).toLowerCase();
 
     let y = computerSelection;
 
@@ -33,7 +33,8 @@ let playRound = (playerSelection, computerSelection) => {
 function Game(){
 
     for (let i = 0; i < 5; i++){
-        playRound(window.prompt("Do you choose Rock, Paper or Scissors?"),getComputerChoice());
+        console.log(playRound(window.prompt("Do you choose Rock, Paper or Scissors?"),getComputerChoice()));
+        
     }
 
 }
